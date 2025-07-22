@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Eylül’e Doğum Günü Hediyesi</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Parisienne&family=Poppins:wght@300;600&display=swap');
+
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-family: 'Parisienne', cursive;
+      font-size: 4rem;
+      color: #ff3c78;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 8px rgba(255, 60, 120, 0.7);
+      animation: fadeInDown 1s ease forwards;
+    }
+
+    h2 {
+      font-weight: 600;
+      margin-bottom: 30px;
+      color: #b8324a;
+      animation: fadeInUp 1s ease forwards;
+      animation-delay: 0.5s;
+    }
+
+    p {
+      max-width: 600px;
+      font-size: 1.2rem;
+      line-height: 1.6;
+      margin-bottom: 40px;
+      animation: fadeIn 1s ease forwards;
+      animation-delay: 1s;
+    }
+
+    button {
+      background: #ff3c78;
+      border: none;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 6px 12px rgba(255, 60, 120, 0.5);
+      transition: background 0.3s ease;
+      animation: fadeIn 1s ease forwards;
+      animation-delay: 1.5s;
+    }
+
+    button:hover {
+      background: #b8324a;
+      box-shadow: 0 8px 16px rgba(184, 50, 74, 0.7);
+    }
+
+    #message {
+      margin-top: 30px;
+      font-size: 1.3rem;
+      font-style: italic;
+      color: #9e1f3f;
+      opacity: 0;
+      transition: opacity 0.8s ease;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(40px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>İyi ki Doğdun Eylül!</h1>
+  <h2>15 Ağustos - Senin Günün</h2>
+  <p>Hayatımın en güzel hikayesi,  
+     seninle yazılan her an bir mucize.  
+     Bu özel gününde, kalbimin en derininden  
+     sevgi dolu bir “iyi ki varsın” gönderiyorum.</p>
+
+  <button id="openMessageBtn">Sana Özel Mesajı Göster</button>
+
+  <div id="message">  
+    Seni tanıdığımdan beri hayatım bambaşka.  
+    İyi ki doğdun, iyi ki benimlesin,  
+    daha nice mutlu yıllara birlikte!  
+    <br><br>– Eren  
+  </div>
+
+  <script>
+    const btn = document.getElementById('openMessageBtn');
+    const msg = document.getElementById('message');
+
+    btn.addEventListener('click', () => {
+      if(msg.style.opacity === '1') {
+        msg.style.opacity = '0';
+        btn.textContent = 'Sana Özel Mesajı Göster';
+      } else {
+        msg.style.opacity = '1';
+        btn.textContent = 'Mesajı Gizle';
+      }
+    });
+  </script>
+
+</body>
+</html>
